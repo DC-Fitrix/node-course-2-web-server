@@ -39,13 +39,19 @@ app.get('/', (req, res) => {
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome to my website'
   });
-})
+});
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
   });
-})
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'projects'
+  })
+});
 
 app.get('/bad', (req, res) => {
   res.send({
